@@ -1,0 +1,90 @@
+<section class="vh-100" *ngIf="details">
+    <div class=" py-5 h-100">
+        <div class="row  d-flex justify-content-center align-items-center h-100">
+
+            <div class="card-body p-4 text-black">
+                <div class="d-flex align-items-center mb-4">
+                    <div class="flex-shrink-0">
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-2.webp"
+                            alt="Generic placeholder image" class="img-fluid rounded-circle border border-dark border-3"
+                            style="width: 70px;">
+                    </div>
+                    <div class="flex-grow-1 ml-4">
+                        <div class="d-flex flex-row align-items-center mb-2">
+                            <h3 class="mb-0 me-2">{{details.firstName}} {{details.lastName}}</h3><br>
+                        </div>
+                        <div class="d-flex flex-row align-items-center mb-2">
+                            <span><i class="fa fa-user ml-2" aria-hidden="true"></i> {{details.username}}</span>
+                            <span><i class="fa fa-user ml-2"></i> {{details.email}}</span>
+                            <span><i class="fa fa-user ml-2"></i> {{details.mobile}}</span>
+
+                        </div>
+                        <div class="mt-4">
+                            <button type="button" class="btn btn-outline-warning  btn-rounded btn-sm">+ Edit</button>
+                            <button type="button" class="btn btn-outline-danger ml-4 btn-rounded btn-sm">Delete
+                                Customer</button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+                <h4>Personal Details</h4>
+                <div class="row mt-3">
+                    <div class="col-3">
+                        <div class="card p-2" style="background-color: rgb(246, 174, 194);;;">
+                            <span>First Name</span>
+                            <h5>{{details.firstName}} </h5>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card p-2" style="background-color: rgb(246, 174, 194);;;">
+                            <span>Last Name</span>
+                            <h5>{{details.lastName}}</h5>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card p-2" style="background-color: rgb(246, 174, 194);;">
+                            <span>Gender</span>
+                            <h5>{{details.gender}}</h5>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card p-2" style="background-color: rgb(246, 174, 194);;">
+                            <span>Date Of Birth</span>
+                            <h4>{{details.dob | date: 'dd/MM/yyyy'}}</h4>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <h4 class="mt-5">Address</h4>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="row p-3">
+                            <div class="col-6"> landmark</div>
+                            <div class="col-6">{{details.address.landmark}}</div>
+                        </div>
+
+                        <div class="row p-3 " style="background-color: rgb(246, 174, 194);;">
+                            <div class="col-6"> City</div>
+                            <div class="col-6">{{details.address.city}}</div>
+                        </div>
+
+                        <div class="row p-3">
+                            <div class="col-6"> State</div>
+                            <div class="col-6">{{details.address.state}}</div>
+                        </div>
+
+                        <div class="row p-3 " style="background-color: rgb(246, 174, 194);;">
+                            <div class="col-6"> Country</div>
+                            <div class="col-6">{{details.address.country}}</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
